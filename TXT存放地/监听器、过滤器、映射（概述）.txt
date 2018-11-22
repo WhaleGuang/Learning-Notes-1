@@ -1,0 +1,30 @@
+@WebServlet:
+	@WebServlet 用于将一个类声明为 Servlet，该注解将会在部署时被容器处理，容器将根据具体的属性配置将相应的类部署为 Servlet。该注解具有下表给出的一些常用属性（以	下所有属性均为可选属性，但是 vlaue 或者 urlPatterns 通常是必需的，且二者不能共存，如果同时指定，通常是忽略 value 的取值）
+
+@WebFilter:
+	@WebFilter是过滤器的注解，不需要在web.xml进行配置，简化的配置文件信息；
+
+	WebFilter 的常用属性介绍:
+
+	filterName    String     指定过滤器的 name 属性，等价于 <filter-name>     
+
+	value    String[]     该属性等价于 urlPatterns 属性。但是两者不应该同时使用。    
+
+	urlPatterns   String[]     指定一组过滤器的 URL 匹配模式。等价于 <url-pattern> 标签。    
+
+	servletNames     String[]     指定过滤器将应用于哪些 Servlet。取值是 @WebServlet 中的 name 属性的取值，或者是 web.xml 中 <servlet-name> 的取值。
+
+@WebListener:
+	WebListener是一个只能运行在Windows上的ASP.NET Core web服务器，基于Http.Sys内核模块驱动构建
+
+
+jstl：
+	jsp标签库，是一个实现Web应用程序中常见的通用功能的定制标记库集，这些功能包括迭代和条件判断、
+	数据管理格式化、XML 操作以及数据库访问，是一个不断完善的开放源代码的JSP标签库，是由apache的jakarta小组来维护的。
+	是一个不断完善的开放源代码的JSP标签库，是由apache的jakarta小组来维护的。
+	JSTL只能运行在支持JSP1.2和Servlet2.3规范的容器上，如tomcat 4.x。在JSP 2.0中也是作为标准支持的。
+	由四个定制标记库（core、format、xml 和 sql）和一对通用标记库验证器（ScriptFreeTLV 和 PermittedTaglibsTLV）组成。
+	如果要使用JSTL，则必须将jstl.jar和 standard.jar文件放到classpath中，如果你还需要使用XML processing及Database access (SQL)标签，还要将相关JAR文件放到classpath中	，这些JAR文件全部存在于下载回来的zip文件中。
+	
+	优点：	1、 在应用程序服务器之间提供了一致的接口，最大程度地提高了WEB应用在各应用服务器之间的移植。
+		2、 简化了JSP和WEB应用程序的开发。
